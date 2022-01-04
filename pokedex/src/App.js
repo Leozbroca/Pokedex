@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import logo from './logo.svg';
 import './App.css';
 
@@ -18,6 +19,20 @@ function App() {
           Learn React
         </a>
       </header>
+=======
+import {React} from 'react'
+import Router from './routes/Router';
+import GlobalStyle from './constants/GlobalStyle';
+import Header from './components/header/Header';
+
+
+function App() {
+  return (
+    <div>
+      <GlobalStyle/>
+      <Header/>
+      <Router/>
+>>>>>>> master
     </div>
   );
 }
