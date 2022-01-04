@@ -1,6 +1,6 @@
 import { React } from 'react'
 import { CustomHeader, LogoBackground, Menu } from './styled'
-import GlobalStyle from '../../constants/GlobalStyle'
+//import GlobalStyle from '../../constants/GlobalStyle'
 import logo from '../../assets/Logo.png'
 
 
