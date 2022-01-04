@@ -2,7 +2,6 @@ import styled from 'styled-components'
 
 export const CustomHeader = styled.div`
 width:100%;
-position:absolute;
 height:150px;
 background-color: red;
 border-bottom: 2px solid black;
