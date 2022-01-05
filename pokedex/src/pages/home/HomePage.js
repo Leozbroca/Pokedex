@@ -8,14 +8,15 @@ import { adicionarPokedex } from '../../services/adicionarPoke';
 import { removerPokedex } from '../../services/removerPoke';
 
 const HomePage = () => {
-    const pokemons = useRequestData([])
+
+    const pokemons = useRequestData(`pokemon/?offset=0&limit=35` ,[])
     const {pokedex, setPokedex} = useContext(GlobalStateContext)
 
     useEffect(() => {
 
     }, [pokedex])    
 
-    const pokemonsList = pokedex && pokemons && pokemons.map((pokemon) => {
+    const pokemonsList = pokedex && pokemons.results && pokemons.results.map((pokemon) => {
             let pokemonExists = pokedex.find((p) => p.name === pokemon.name)
             if(pokemonExists){
                 return <CardEscolhido key={pokemon.name} name={pokemon.name} pokemon={pokemon} removerPokedex={removerPokedex}/>   
