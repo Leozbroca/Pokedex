@@ -7,14 +7,13 @@ import PokedexPage from "../pages/pokedex/PokedexPage";
 
 const Router = () => {
     return(
-        <BrowserRouter>
+        
             <Routes>
                 <Route exact path="/" element={<HomePage/>}/> 
                 <Route exact path="/Pokedex" element={<PokedexPage/>}/> 
                 <Route exact path="/Detalhes/:id" element={<DetalhesPage/>}/> 
                 <Route path="/*" element={<ErrorPage/>}/>
             </Routes>
-        </BrowserRouter>
     )
 }
 

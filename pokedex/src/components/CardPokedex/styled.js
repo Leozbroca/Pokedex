@@ -11,7 +11,7 @@ width:150px;
 height:200px;
 margin:0px 20px 40px;
 font-family: "Zen Dots", cursive;
-box-shadow: 10px 10px 5px black;
+box-shadow: 5px 5px 5px gray;
 `
 
 export const CardImg = styled.img`

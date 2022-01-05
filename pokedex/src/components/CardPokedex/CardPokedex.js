@@ -4,9 +4,10 @@ import BASE_URL from "../../constants/baseURI";
 import { Card, CardImg } from "./styled";
 import GlobalStateContext from "../../contexts/GlobalContextState";
 
-export default function CardPokemon({name, pokemon, adicionarPokedex}) {
+
+export default function CardPokemon({name, pokemon, removerPokedex}) {
     const [fotoPokemon, setFotoPokemon] = useState([])
-    const {setPokedex} = useContext(GlobalStateContext)
+    const {pokedex, setPokedex} = useContext(GlobalStateContext)
 
     const pegarInformacoesPokemon = async () => {    
         try {
@@ -25,7 +26,7 @@ export default function CardPokemon({name, pokemon, adicionarPokedex}) {
         <Card>
             <div>{name}</div>
             <CardImg src={fotoPokemon}></CardImg>
-            <button onClick={() => adicionarPokedex(pokemon, setPokedex)}>Adicionar a pokedex</button>
+            <button onClick={() => removerPokedex(pokemon, pokedex, setPokedex)}>Remover</button>
             <button>Ver detalhes</button>
         </Card>
     )

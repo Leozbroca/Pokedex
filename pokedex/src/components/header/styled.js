@@ -25,8 +25,17 @@ padding-left:50px;
 export const Menu = styled.div`
 display:flex;
 flex-direction: row;
+margin-right:50px;
 p{
     padding: 50px;
     font-size:25px;
 }
+`
+
+export const ButtonHeader = styled.button`
+    width:120px;
+    height:70px;
+    font-size:20px;
+    margin-left:20px;
+
 `

@@ -8,7 +8,6 @@ const useRequestData = (initialState) => {
         axios.get(`https://pokeapi.co/api/v2/pokemon/?offset=0&limit=35`)
         .then((res) =>{
             setData(res.data.results)
-            console.log(res.data.results)
         })
         .catch((err) => {
             alert(err)
