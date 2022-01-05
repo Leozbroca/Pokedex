@@ -1,12 +1,14 @@
-import React, { useEffect, useState, useContext } from "react"
+import React, { useEffect, useState, useContext} from "react"
 import axios from 'axios';
 import BASE_URL from "../../constants/baseURI";
-import { Card, CardImg } from "./styled";
+import { Card, CardImg, IconPokebola, Nome} from "./styled";
 import GlobalStateContext from "../../contexts/GlobalContextState";
+import pokebola from '../../assets/pokebola.png'
+import pokebola2 from '../../assets/pokebola2.png'
 
-export default function CardPokemon({name, pokemon, adicionarPokedex}) {
+export default function CardPokemon({name, pokemon, removerPokedex}) {
     const [fotoPokemon, setFotoPokemon] = useState([])
-    const {setPokedex} = useContext(GlobalStateContext)
+    const {pokedex, setPokedex} = useContext(GlobalStateContext)
 
     const pegarInformacoesPokemon = async () => {    
         try {
@@ -23,9 +25,9 @@ export default function CardPokemon({name, pokemon, adicionarPokedex}) {
     
     return (
         <Card>
-            <div>{name}</div>
+            <Nome>{name}<IconPokebola src={pokebola2}/></Nome>
             <CardImg src={fotoPokemon}></CardImg>
-            <button onClick={() => adicionarPokedex(pokemon, setPokedex)}>Adicionar a pokedex</button>
+            <button onClick={() => removerPokedex(pokemon, pokedex, setPokedex)}>Remover</button>
             <button>Ver detalhes</button>
         </Card>
     )
