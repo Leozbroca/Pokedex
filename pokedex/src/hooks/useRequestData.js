@@ -1,18 +1,24 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
+import BASE_URL from '../constants/baseURI'
 
-const useRequestData = (initialState) => {
+const useRequestData = (endpoint, initialState) => {
     const [data, setData] = useState(initialState)
+    const [isLoading, setIsLoading] = useState(false);
+    const [error, setError] = useState("");
 
     useEffect(() => {
-        axios.get(`https://pokeapi.co/api/v2/pokemon/?offset=0&limit=35`)
+        setIsLoading(true)
+        axios.get(`${BASE_URL}${endpoint}`)
         .then((res) =>{
-            setData(res.data.results)
+            setIsLoading(false)
+            setData(res.data)
         })
         .catch((err) => {
-            alert(err)
+            setIsLoading(false)
+            setError(err)
         })
-    }, [])
+    }, [endpoint])
 
     return (data)
 }
