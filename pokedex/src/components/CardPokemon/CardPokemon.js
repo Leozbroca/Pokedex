@@ -13,7 +13,7 @@ export default function CardPokemon({ name, pokemon, adicionarPokedex }) {
 
   const pegarInformacoesPokemon = async () => {
     try {
-      const res = await axios.get(`${BASE_URL}${name}`);
+      const res = await axios.get(pokemon.url);
       setFotoPokemon(res.data.sprites.other["official-artwork"].front_default);
     } catch (err) {
       console.log(err);
