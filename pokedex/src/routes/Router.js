@@ -10,8 +10,8 @@ const Router = () => {
         
             <Routes>
                 <Route exact path="/" element={<HomePage/>}/> 
-                <Route exact path="/Pokedex" element={<PokedexPage/>}/> 
-                <Route exact path="/Detalhes/:name" element={<DetalhesPage/>}/> 
+                <Route exact path="/pokedex" element={<PokedexPage/>}/> 
+                <Route exact path="/detalhes/:name" element={<DetalhesPage/>}/> 
                 <Route path="/*" element={<ErrorPage/>}/>
             </Routes>
     )

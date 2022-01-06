@@ -1,38 +1,61 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { useParams } from "react-router-dom";
 import useRequestData from "../../hooks/useRequestData";
+import { goToHome } from "../../routes/Coordinator";
+import { useNavigate } from "react-router-dom";
+import {
+  MainContainer,
+  CardPokemon,
+  DescriptionContainer,
+  TypesMovesContainer
+} from './styled';
 
 const DetalhesPage = () => {
+  const navigate = useNavigate();
   const params = useParams();
-  const pokemon = useRequestData(`pokemon/${params.name}`, []);
+  const [pokemon] = useRequestData(`${params.name}`);
 
-//   const pokeType =
-//     pokemon.types.map((poke, index) => {
-//       return <p key={index}>{poke.type.name}</p>;
-//     });
+  const pokemonTypes = pokemon &&
+    pokemon.types.map((pokemon) => {
+      return <p key={pokemon.id}>{pokemon.type.name}</p>;
+    });
 
-//   const pokeMoves =
-//     pokemon.moves.map((poke, index) => {
-//       return <p key={index}>{poke.move.name}</p>;
-//     });
+    const pokemonMoves =
+    pokemon &&
+    pokemon.moves.slice(0, 3).map((pokemon) => {
+      return <p key={pokemon.id}>{pokemon.move.name}</p>;
+    });
 
-//   console.log(pokeType);
-//   console.log(pokeMoves);
+    const pokemonStats =
+    pokemon &&
+    pokemon.stats.map((pokemon) => {
+      return <div key={pokemon.id}>{pokemon.stat.name}{" "}{pokemon.base_stat}</div>;
+    });
 
   return (
-    <div>
+    <MainContainer>
+      <h4 onClick={() => goToHome(navigate)}>X</h4>
       {pokemon && (
         <div>
-          <h1>{pokemon.name}</h1>
-          <p>{pokemon.height}</p>
-          <p>{pokemon.weight}</p>
-          <img
-            src={`https://cdn.traction.one/pokedex/pokemon/${pokemon.id}.png`}
+        <CardPokemon type={pokemon.types[0].type.name}>
+        <img
+            src={pokemon.sprites.other["official-artwork"].front_default}
             alt={pokemon.name}
           />
+          <h1>{pokemon.name}</h1>
+        </CardPokemon>
+        <DescriptionContainer>
+        <TypesMovesContainer>
+          {pokemonTypes}
+          {pokemonMoves}
+        </TypesMovesContainer>
+        <section>
+          {pokemonStats}
+        </section>
+        </DescriptionContainer>
         </div>
       )}
-    </div>
+    </MainContainer>
   );
 };
 

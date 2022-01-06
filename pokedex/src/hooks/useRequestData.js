@@ -2,8 +2,8 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 import BASE_URL from '../constants/baseURI'
 
-const useRequestData = (endpoint, initialState) => {
-    const [data, setData] = useState(initialState)
+const useRequestData = (endpoint) => {
+    const [data, setData] = useState(undefined)
     const [isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState("");
 
@@ -20,7 +20,7 @@ const useRequestData = (endpoint, initialState) => {
         })
     }, [endpoint])
 
-    return (data)
+    return [data, error, isLoading]
 }
 
 export default useRequestData
