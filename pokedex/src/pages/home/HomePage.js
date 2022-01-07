@@ -10,9 +10,9 @@ import PaginationOutlined from "../../components/Paginacao/Paginacao";
 import CustomizedSnackbars from "../../constants/Alerts";
 
 const HomePage = () => {
+
     const { pokedex, paginaPoke, open, setOpen} = useContext(GlobalStateContext);
   const [pokemons] = useRequestData(`?offset=${paginaPoke}&limit=30`);
-
 
   useEffect(() => {}, [pokedex]);
 

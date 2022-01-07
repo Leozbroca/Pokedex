@@ -27,13 +27,16 @@ export const CardPokemon = styled.div`
 export const TypeButton = styled.div`
   background: ${(props) => typeColor[props.type]};
   border-radius: 12px;
-  width: 6.8rem;
-  height: 1.8rem;
+  width: 9rem;
+  height: 2.2rem;
   margin-right: 0.5rem;
   text-transform: uppercase;
   display: flex;
-  justify-content: center;
   align-items: center;
+  
+  p {
+    color: #ffffff;
+  }
 `;
 
 export const StatsArea = styled.div`
