@@ -9,7 +9,6 @@ import { removerPokedex } from "../../services/removerPoke";
 
 const HomePage = () => {
   const [pokemons] = useRequestData(`?offset=0&limit=30`);
-  const [pokeFoto] = useRequestData(`${pokemons?.url}`);
   const { pokedex } = useContext(GlobalStateContext);
 
   useEffect(() => {}, [pokedex]);
