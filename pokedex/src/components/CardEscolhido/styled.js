@@ -12,6 +12,7 @@ export const Card = styled.div`
   margin: 0px 20px 40px;
   font-family: "Zen Dots", cursive;
   box-shadow: 0px 0px 8px 8px #d9d9d9;
+
   div {
     cursor: pointer;
     margin-bottom: 0.6rem;

@@ -7,10 +7,11 @@ import pokebola from "../../assets/pokebola.png";
 import pokebola2 from "../../assets/pokebola2.png";
 import { goToDetalhes } from "../../routes/Coordinator";
 import { useNavigate } from "react-router-dom";
+import Loading from "../../constants/Loading";
 
 export default function CardPokemon({ name, pokemon, removerPokedex }) {
   const navigate = useNavigate();
-  const [fotoPokemon, setFotoPokemon] = useState([]);
+  const [fotoPokemon, setFotoPokemon] = useState();
   const { pokedex, setPokedex } = useContext(GlobalStateContext);
 
   const pegarInformacoesPokemon = async () => {
@@ -28,6 +29,9 @@ export default function CardPokemon({ name, pokemon, removerPokedex }) {
 
   return (
     <Card>
+      
+      {!fotoPokemon ? <Loading/> : 
+      <div>
       <div onClick={() => goToDetalhes(navigate, name)}>
         <CardImg src={fotoPokemon} />
         <Nome>{name}<IconPokebola src={pokebola2} /></Nome>
@@ -35,6 +39,7 @@ export default function CardPokemon({ name, pokemon, removerPokedex }) {
       <button onClick={() => removerPokedex(pokemon, pokedex, setPokedex)}>
         Remover
       </button>
+      </div>}
     </Card>
   );
 }

@@ -9,9 +9,13 @@ export const CustomHeader = styled.div`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+
   h1 {
     padding-right: 50px;
   }
+
+  
+  box-shadow: 0px 0px 10px gray;
 `;
 
 export const LogoBackground = styled.img`

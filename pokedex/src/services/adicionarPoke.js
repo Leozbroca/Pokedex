@@ -1,6 +1,6 @@
-export const adicionarPokedex = (pokemon, setPokedex) => {
+export const adicionarPokedex = (pokemon, setPokedex, setOpen, setPokeSnack) => {
     let pokedexLocal = JSON.parse(localStorage.getItem('pokedex'))
-
+    
     if(!pokedexLocal){
         pokedexLocal = []
         localStorage.setItem('pokedex', JSON.stringify([...pokedexLocal, pokemon]))
@@ -11,6 +11,8 @@ export const adicionarPokedex = (pokemon, setPokedex) => {
         }
 
         localStorage.setItem('pokedex', JSON.stringify([...pokedexLocal, pokemon])) 
-        setPokedex(JSON.parse(localStorage.getItem('pokedex'))) 
+        setPokedex(JSON.parse(localStorage.getItem('pokedex')))
+        setPokeSnack(pokemon.name)
+        setOpen(true)
     }
 }

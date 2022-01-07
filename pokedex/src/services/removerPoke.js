@@ -3,7 +3,6 @@ export const removerPokedex = (pokemon, pokedex, setPokedex) => {
 
         if(pokedex[index] !== -1){
             pokedex.splice(index, 1)
-            alert("pokemon removido!")
         }
         localStorage.setItem('pokedex', JSON.stringify(pokedex))
         setPokedex(JSON.parse(localStorage.getItem('pokedex')))
