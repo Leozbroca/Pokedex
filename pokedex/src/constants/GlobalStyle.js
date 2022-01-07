@@ -5,6 +5,7 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     font-family: "Flexo-Regular",arial,sans-serif;
+    overflow-x: hidden;
   }
 `;
  

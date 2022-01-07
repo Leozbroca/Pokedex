@@ -1,6 +1,5 @@
 import React, { useEffect, useState, useContext } from "react";
 import axios from "axios";
-import BASE_URL from "../../constants/baseURI";
 import { Card, CardImg } from "./styled";
 import GlobalStateContext from "../../contexts/GlobalContextState";
 import { goToDetalhes } from "../../routes/Coordinator";
@@ -14,7 +13,7 @@ export default function CardPokemon({ name, pokemon, removerPokedex }) {
 
   const pegarInformacoesPokemon = async () => {
     try {
-      const res = await axios.get(`${BASE_URL}${name}`);
+      const res = await axios.get(pokemon.url);
       setFotoPokemon(res.data.sprites.other["official-artwork"].front_default);
     } catch (err) {
       console.log(err);
