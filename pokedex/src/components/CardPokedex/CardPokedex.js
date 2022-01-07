@@ -5,10 +5,11 @@ import { Card, CardImg } from "./styled";
 import GlobalStateContext from "../../contexts/GlobalContextState";
 import { goToDetalhes } from "../../routes/Coordinator";
 import { useNavigate } from "react-router-dom";
+import Loading from "../../constants/Loading";
 
 export default function CardPokemon({ name, pokemon, removerPokedex }) {
   const navigate = useNavigate();
-  const [fotoPokemon, setFotoPokemon] = useState([]);
+  const [fotoPokemon, setFotoPokemon] = useState();
   const { pokedex, setPokedex } = useContext(GlobalStateContext);
 
   const pegarInformacoesPokemon = async () => {
@@ -26,6 +27,8 @@ export default function CardPokemon({ name, pokemon, removerPokedex }) {
 
   return (
     <Card>
+      {!fotoPokemon ? <Loading/> : 
+      <div>
       <div onClick={() => goToDetalhes(navigate, name)}>
         <CardImg src={fotoPokemon} />
         <p>{name}</p>
@@ -33,6 +36,7 @@ export default function CardPokemon({ name, pokemon, removerPokedex }) {
       <button onClick={() => removerPokedex(pokemon, pokedex, setPokedex)}>
         Remover
       </button>
+      </div>}
     </Card>
   );
 }
