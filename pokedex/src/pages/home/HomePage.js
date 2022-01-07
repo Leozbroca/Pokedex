@@ -1,17 +1,21 @@
-import { React, useEffect, useContext } from "react";
+import { React, useEffect, useContext, useState } from "react";
 import useRequestData from "../../hooks/useRequestData";
 import CardPokemon from "../../components/CardPokemon/CardPokemon";
 import CardEscolhido from "../../components/CardEscolhido/CardEscolhido";
-import { ListaPoke } from "./styled";
+import { ListaPoke, DivPaginacao, MainDiv } from "./styled";
 import GlobalStateContext from "../../contexts/GlobalContextState";
 import { adicionarPokedex } from "../../services/adicionarPoke";
 import { removerPokedex } from "../../services/removerPoke";
+import PaginationOutlined from "../../components/Paginacao/Paginacao";
+import CustomizedSnackbars from "../../constants/Alerts";
 
 const HomePage = () => {
-  const [pokemons] = useRequestData(`?offset=0&limit=30`);
-  const { pokedex } = useContext(GlobalStateContext);
+
+    const { pokedex, paginaPoke, open, setOpen} = useContext(GlobalStateContext);
+  const [pokemons] = useRequestData(`?offset=${paginaPoke}&limit=30`);
 
   useEffect(() => {}, [pokedex]);
+
 
   const pokemonsList =
     pokedex &&
@@ -39,10 +43,22 @@ const HomePage = () => {
       }
     });
 
+    const handleClose = (event, reason) => {
+        if (reason === 'clickaway') {
+          return;
+        }
+    
+        setOpen(false);
+      };
+    
   return (
-    <div>
+    <MainDiv>
+      <DivPaginacao>
+          {PaginationOutlined()}
+      </DivPaginacao>
       <ListaPoke>{pokemonsList}</ListaPoke>
-    </div>
+        {CustomizedSnackbars()}
+    </MainDiv>
   );
 };
 
