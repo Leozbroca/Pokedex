@@ -33,8 +33,8 @@ const DetalhesPage = () => {
 
   const pokemonMoves =
     pokemon &&
-    pokemon.moves.slice(0, 3).map((pokemon) => {
-      return <p key={pokemon.id}>{pokemon.move.name}</p>;
+    pokemon.moves.slice(0, 4).map((pokemon) => {
+      return <p key={pokemon.id}>- {pokemon.move.name}</p>;
     });
 
   const pokemonStats =

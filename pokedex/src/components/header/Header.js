@@ -7,9 +7,9 @@ import { useNavigate } from "react-router-dom";
 const Header = () => {
   let navigate = useNavigate();
   return (
-    <>
-      {window.location.pathname === "/" ||
-      window.location.pathname === "/pokedex" ? (
+    // <>
+    //   {window.location.pathname === "/" ||
+    //   window.location.pathname === "/pokedex" ? (
         <CustomHeader>
           <LogoBackground onClick={() => goToHome(navigate)} src={logo} />
           <Menu>
@@ -19,10 +19,10 @@ const Header = () => {
             </ButtonHeader>
           </Menu>
         </CustomHeader>
-      ) : (
-        ""
-      )}
-    </>
+    //   ) : (
+    //     ""
+    //   )}
+    // </>
   );
 };
 

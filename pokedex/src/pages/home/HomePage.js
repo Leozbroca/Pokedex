@@ -6,15 +6,20 @@ import { ListaPoke, DivPaginacao, MainDiv } from "./styled";
 import GlobalStateContext from "../../contexts/GlobalContextState";
 import { adicionarPokedex } from "../../services/adicionarPoke";
 import { removerPokedex } from "../../services/removerPoke";
+import { removerPokedexfromHome } from "../../services/removerPokeFromHome";
 import PaginationOutlined from "../../components/Paginacao/Paginacao";
 import CustomizedSnackbars from "../../constants/Alerts";
+import CustomizedSnackbars2 from "../../constants/Alerts2";
+import Header from '../../components/header/Header';
 
 const HomePage = () => {
 
-    const { pokedex, paginaPoke, open, setOpen} = useContext(GlobalStateContext);
+  const { pokedex, paginaPoke, setOpenRelease, openRelease, open} = useContext(GlobalStateContext);
   const [pokemons] = useRequestData(`?offset=${paginaPoke}&limit=30`);
 
-  useEffect(() => {}, [pokedex]);
+  useEffect(() => {
+
+  }, [pokedex]);
 
 
   const pokemonsList =
@@ -28,7 +33,7 @@ const HomePage = () => {
             key={pokemon.name}
             name={pokemon.name}
             pokemon={pokemon}
-            removerPokedex={removerPokedex}
+            removerPokedexfromHome={removerPokedexfromHome}
           />
         );
       } else {
@@ -42,22 +47,16 @@ const HomePage = () => {
         );
       }
     });
-
-    const handleClose = (event, reason) => {
-        if (reason === 'clickaway') {
-          return;
-        }
-    
-        setOpen(false);
-      };
     
   return (
     <MainDiv>
+      <Header/>
       <DivPaginacao>
           {PaginationOutlined()}
       </DivPaginacao>
       <ListaPoke>{pokemonsList}</ListaPoke>
         {CustomizedSnackbars()}
+        {CustomizedSnackbars2()}
     </MainDiv>
   );
 };

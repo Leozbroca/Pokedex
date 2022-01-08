@@ -1,4 +1,4 @@
-export const removerPokedex = (pokemon, pokedex, setPokedex, setPokeSnackRelease, setOpenRelease, setOpen, pokeSnack) => {
+export const removerPokedexfromHome = (pokemon, pokedex, setPokedex, setPokeSnackRelease, setOpenRelease, setOpen, pokeSnack) => {
     const index = pokedex.findIndex((i) => i.name === pokemon.name);
 
         if(pokedex[index] !== -1){
@@ -8,6 +8,5 @@ export const removerPokedex = (pokemon, pokedex, setPokedex, setPokeSnackRelease
         setPokedex(JSON.parse(localStorage.getItem('pokedex')))
         setPokeSnackRelease(pokemon.name)
         setOpen(false)
-        setOpenRelease(true)
-           
+        setOpenRelease(true)   
 }
