@@ -92,5 +92,5 @@ export const MovesContainer = styled.div`
 
 export const StatsContainer = styled.div`
   position: absolute;
-  left: 54rem;
+  left: 62vw;
 `;

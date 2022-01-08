@@ -1,10 +1,9 @@
 import styled from 'styled-components'
 
 export const ListaPoke = styled.div`
-display:flex;
-flex-wrap: wrap;
-padding:50px 4%;
-justify-content: center;
+display: grid;
+grid-template-columns: repeat(5, 1fr);
+padding: 2rem 4rem;
 `
 
 export const DivPaginacao = styled.div`
