@@ -10,7 +10,7 @@ www.link.com.br
 
 ## O que funciona:
 - Visualizar todos pokemons disponibilizados na API 
-- Visualizar uma página de detalhes com:
+- Visualizar uma página de detalhes ao clicar no card o pokemon a partir da página home ou página pokedex com:
   - Nome e imagem do pokemon
   - Tipo
   - 4 movimentos
@@ -18,5 +18,7 @@ www.link.com.br
 - Adicionar e remover o pokemon da pokedex
 
 ## Imagens
-- Item 3
-- Item 4
+![home](https://user-images.githubusercontent.com/69688122/148769571-708b8415-aba0-4a28-96c2-7997344c83b6.png)
+![pokedex](https://user-images.githubusercontent.com/69688122/148769586-a462ff2c-e11c-430b-acf4-6ac6aa146488.png)
+![details](https://user-images.githubusercontent.com/69688122/148769598-bcb21460-7feb-456f-ba8c-c79fa5ea456b.png)
+
