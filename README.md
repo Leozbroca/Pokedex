@@ -1,16 +1,22 @@
 # POKEDEX
 
-Nome dos integrantes: 
-- Pessoa 1
-- Pessoa 2
-- Pessoa 3
+## Nome dos integrantes: 
+- Leonardo Broca
+- Stefani Barros
 
-Link do Surge: www.link.com.br
 
-O que funciona:
-- Item 1
-- Item 2
+## Link do Surge: 
+www.link.com.br
 
-O que não funciona: 
+## O que funciona:
+- Visualizar todos pokemons disponibilizados na API 
+- Visualizar uma página de detalhes com:
+  - Nome e imagem do pokemon
+  - Tipo
+  - 4 movimentos
+  - Estatísticas
+- Adicionar e remover o pokemon da pokedex
+
+## Imagens
 - Item 3
 - Item 4
