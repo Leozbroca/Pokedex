@@ -1,40 +1,40 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 export const Card = styled.div`
-display:flex;
-flex-direction: column;
-justify-content: space-around;
-align-items: center;
-border: 1px solid #e3e3e3;
-border-radius: 15px;
-width:12.4rem;
-height:16.8rem;
-margin:0px 20px 40px;
-font-family: "Zen Dots", cursive;
-box-shadow: 0px 0px 8px 8px #f2f2f2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  border: 1px solid #e3e3e3;
+  border-radius: 15px;
+  width: 12.4rem;
+  height: 16.8rem;
+  margin: 0px 20px 40px;
+  font-family: "Zen Dots", cursive;
+  box-shadow: 0px 0px 8px 8px #f2f2f2;
 
-div {
+  div {
     cursor: pointer;
 
-    p{
-        text-align: center;
+    p {
+      text-align: center;
     }
-}
+  }
 
-button {
+  button {
     border: none;
     border-radius: 8px;
     padding: 0.6rem;
-    width:150px;
-    text-align:center;
-    margin-top:20px;
-}
-`
+    width: 150px;
+    text-align: center;
+    margin-top: 20px;
+  }
+`;
 
 export const CardImg = styled.img`
-width:8rem;
-height:8rem;
-`
+  width: 8rem;
+  height: 8rem;
+`;
 
 export const Nome = styled.div`
   display: flex;
@@ -42,8 +42,8 @@ export const Nome = styled.div`
   align-items: center;
   justify-content: center;
   height: 25px;
-  width:100%;
-  padding-bottom:10px;
+  width: 100%;
+  padding-bottom: 10px;
 `;
 
 export const DivImagem = styled.div`
@@ -51,31 +51,29 @@ export const DivImagem = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width:100%;
+  width: 100%;
 `;
 
 export const Id = styled.div`
-position:absolute;
-display:flex;
-justify-content:flex-end;
-width:10.4rem;
-margin-top:-20px;
+  position: absolute;
+  display: flex;
+  justify-content: flex-end;
+  width: 10.4rem;
+  margin-top: -20px;
 
-
-p{
+  p {
     font-size: 0.8rem;
     color: rgb(164, 164, 164);
     font-weight: 400;
-}
-`
+  }
+`;
 
 export const TypesContainer = styled.div`
-display:flex;
-align-items:center;
-justify-content: center;
-height:25px;
-width:100%;
-
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 25px;
+  width: 100%;
 
   div {
     display: flex;
@@ -83,10 +81,9 @@ width:100%;
 `;
 
 export const TypesRow = styled.div`
-display: flex;
-flex-direction:row;
-justify-content: center;
-width:40px;
-height:40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
 `;
-
