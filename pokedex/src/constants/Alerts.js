@@ -11,9 +11,10 @@ const Alert = React.forwardRef(function Alert(props, ref) {
 });
 
 export default function CustomizedSnackbars() {
-  const { open, setOpen, pokeSnack } = React.useContext(GlobalStateContext);
-  const vertical = "top";
-  const horizontal = "center";
+  const {open, setOpen, pokeSnack} = React.useContext(GlobalStateContext)
+  const vertical = 'bottom'
+  const horizontal = 'left'
+
 
   const handleClose = (event, reason) => {
     if (reason === "clickaway") {

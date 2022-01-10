@@ -8,26 +8,32 @@ export const CustomHeader = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  box-shadow: 0px 0px 10px gray;
 
   h1 {
     padding-right: 50px;
   }
 
-  box-shadow: 0px 0px 10px gray;
-
-  @media (max-width: 800px) {
-    flex-direction: column;
+  @media screen and (min-device-width : 320px) and (max-device-width : 480px)  {
+  button{
+    width: 4.8rem;
+    height: 2rem;
   }
+}
+
 `;
+
 
 export const LogoBackground = styled.img`
   width: 12rem;
   height: 6.4rem;
   padding-left: 6.6rem;
 
-  @media (max-width: 800px) {
-    width: 10rem;
-    padding-left: 1rem;
+  @media screen and (min-device-width : 320px) and (max-device-width : 480px)  {
+  
+  width: 10rem;
+  height: 5.2rem;
+  padding-left:1.5rem;
   }
 `;
 

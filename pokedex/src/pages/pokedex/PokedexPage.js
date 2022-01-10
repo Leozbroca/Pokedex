@@ -1,14 +1,16 @@
-import { React, useEffect, useContext } from "react";
-import CardPokedex from "../../components/CardPokedex/CardPokedex";
-import { ListaPoke } from "../home/styled";
-import GlobalStateContext from "../../contexts/GlobalContextState";
-import { removerPokedex } from "../../services/removerPoke";
-import { ImgOpenBall, PokedexDiv } from "./styled";
-import openBall from "../../assets/openBall.jpg";
-import { Typography } from "@mui/material";
-import Header from "../../components/header/Header";
-import CustomizedSnackbars from "../../constants/Alerts";
-import CustomizedSnackbars2 from "../../constants/Alerts2";
+
+import { React, useEffect, useContext } from 'react'
+import CardPokedex from '../../components/CardPokedex/CardPokedex'
+import { ListaPoke } from './styled';
+import GlobalStateContext from '../../contexts/GlobalContextState';
+import { removerPokedex } from '../../services/removerPoke';
+import {ImgOpenBall, PokedexDiv} from './styled'
+import openBall from '../../assets/openBall.jpg'
+import { Typography } from '@mui/material'
+import Header from '../../components/header/Header';
+import CustomizedSnackbars from '../../constants/Alerts'
+import CustomizedSnackbars2 from '../../constants/Alerts2'
+
 
 const PokedexPage = () => {
   const { pokedex, setOpen, open, openRelease } =
