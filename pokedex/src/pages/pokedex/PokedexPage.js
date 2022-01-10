@@ -1,6 +1,6 @@
 import { React, useEffect, useContext } from 'react'
 import CardPokedex from '../../components/CardPokedex/CardPokedex'
-import { ListaPoke } from '../home/styled';
+import { ListaPoke } from './styled';
 import GlobalStateContext from '../../contexts/GlobalContextState';
 import { removerPokedex } from '../../services/removerPoke';
 import {ImgOpenBall, PokedexDiv} from './styled'

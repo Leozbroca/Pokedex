@@ -12,6 +12,8 @@ import {
   MovesContainer,
   StatsContainer,
   DescriptionContainer,
+  DivMaior,
+  DivMoves
 } from "./styled";
 
 const DetalhesPage = () => {
@@ -55,9 +57,9 @@ const DetalhesPage = () => {
   return (
     <div>
       {pokemon && (
-        <div>
+        <DivMaior>
           <CardPokemon type={pokeType}>
-            <h4 onClick={() => goToHome(navigate)}>X</h4>
+            <h4 onClick={() => goToHome(navigate)}>Voltar</h4>
             <img
               src={pokemon.sprites.other["official-artwork"].front_default}
               alt={pokemon.name}
@@ -65,7 +67,7 @@ const DetalhesPage = () => {
             <h1>{pokemon.name}</h1>
           </CardPokemon>
           <DescriptionContainer>
-            <div>
+            <DivMoves>
               <TypesContainer>
                 {pokemon.types.length > 1 ? <h1>Types</h1> : <h1>Type</h1>}
                 <div>{pokemonTypes}</div>
@@ -74,13 +76,13 @@ const DetalhesPage = () => {
                 <h1>Moves</h1>
                 <div>{pokemonMoves}</div>
               </MovesContainer>
-            </div>
+            </DivMoves>
             <StatsContainer>
               <h1>Stats</h1>
               <div>{pokemonStats}</div>
             </StatsContainer>
           </DescriptionContainer>
-        </div>
+        </DivMaior>
       )}
     </div>
   );

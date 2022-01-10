@@ -14,6 +14,8 @@ export const CardPokemon = styled.div`
 
   h1 {
     align-self: center;
+    font-style: italic;
+    font-size:3rem;
   }
 
   h4 {
@@ -22,6 +24,22 @@ export const CardPokemon = styled.div`
     cursor: pointer;
     color: #ffffff;
   }
+
+  @media screen and (min-device-width : 320px) and (max-device-width : 600px)  {
+
+    width:100vw;
+
+    img{
+    width: 18rem;
+    height: 18rem;
+    }
+
+    h1{
+      font-size: 3rem;
+    }
+
+} 
+
 `;
 
 export const TypeButton = styled.div`
@@ -48,6 +66,11 @@ export const StatsArea = styled.div`
   p {
     margin: 0.6rem 0.5rem;
   }
+
+  @media screen and (min-device-width : 320px) and (max-device-width : 600px)  {
+    width:100vw;
+
+  }  
 `;
 
 export const StatsItem = styled.div`
@@ -66,6 +89,14 @@ export const StatsItem = styled.div`
     position: absolute;
     border-radius: 0.5rem;
   }
+
+  @media screen and (min-device-width : 320px) and (max-device-width : 600px)  {
+    display:flex;
+    justify-content: flex-start;
+    align-items: center;
+    width:90%;
+
+  }  
 `;
 
 export const DescriptionContainer = styled.div`
@@ -78,6 +109,12 @@ export const DescriptionContainer = styled.div`
       text-align: center;
     }
   }
+
+  @media screen and (min-device-width : 320px) and (max-device-width : 600px)  {
+    flex-direction:column;
+    width:100vw;
+
+  }  
 `;
 
 export const TypesContainer = styled.div`
@@ -85,12 +122,62 @@ export const TypesContainer = styled.div`
   div {
     display: flex;
   }
+
+  @media screen and (min-device-width : 320px) and (max-device-width : 600px)  {
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items:center;
+    width:100vw;
+  }  
 `;
+
 export const MovesContainer = styled.div`
   margin-right: 50rem;
+
+  @media screen and (min-device-width : 320px) and (max-device-width : 600px)  {
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items:center;
+    width:100vw;
+    padding-top:10px;
+  }  
 `;
 
 export const StatsContainer = styled.div`
   position: absolute;
   left: 62vw;
+
+  @media screen and (min-device-width : 320px) and (max-device-width : 600px)  {
+    position: relative;
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-content:center;
+    left:0px;
+    width:100vw;
+    font-size:15px;
+    padding:0px;
+  }
 `;
+
+export const DivMaior = styled.div`
+@media screen and (min-device-width : 320px) and (max-device-width : 600px)  {
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction:column;
+    width:100vw;
+} 
+`
+
+export const DivMoves = styled.div`
+@media screen and (min-device-width : 320px) and (max-device-width : 600px)  {
+    padding-top:180px;
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    width:100vw;
+
+} 
+`
