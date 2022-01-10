@@ -10,17 +10,14 @@ import { removerPokedexfromHome } from "../../services/removerPokeFromHome";
 import PaginationOutlined from "../../components/Paginacao/Paginacao";
 import CustomizedSnackbars from "../../constants/Alerts";
 import CustomizedSnackbars2 from "../../constants/Alerts2";
-import Header from '../../components/header/Header';
+import Header from "../../components/header/Header";
 
 const HomePage = () => {
-
-  const { pokedex, paginaPoke, setOpenRelease, openRelease, open} = useContext(GlobalStateContext);
+  const { pokedex, paginaPoke, setOpenRelease, openRelease, open } =
+    useContext(GlobalStateContext);
   const [pokemons] = useRequestData(`?offset=${paginaPoke}&limit=30`);
 
-  useEffect(() => {
-
-  }, [pokedex]);
-
+  useEffect(() => {}, [pokedex]);
 
   const pokemonsList =
     pokedex &&
@@ -47,16 +44,14 @@ const HomePage = () => {
         );
       }
     });
-    
+
   return (
     <MainDiv>
-      <Header/>
-      <DivPaginacao>
-          {PaginationOutlined()}
-      </DivPaginacao>
+      <Header />
+      <DivPaginacao>{PaginationOutlined()}</DivPaginacao>
       <ListaPoke>{pokemonsList}</ListaPoke>
-        {CustomizedSnackbars()}
-        {CustomizedSnackbars2()}
+      {CustomizedSnackbars()}
+      {CustomizedSnackbars2()}
     </MainDiv>
   );
 };

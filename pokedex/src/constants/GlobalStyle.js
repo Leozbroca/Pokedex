@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components'
+import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -8,5 +8,5 @@ const GlobalStyle = createGlobalStyle`
     overflow-x: hidden;
   }
 `;
- 
+
 export default GlobalStyle;
