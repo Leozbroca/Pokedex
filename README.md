@@ -6,7 +6,7 @@
 
 
 ## Link do Surge: 
-www.link.com.br
+historical-boundary.surge.sh
 
 ## O que funciona:
 - Visualizar todos pokemons disponibilizados na API 
@@ -16,6 +16,15 @@ www.link.com.br
   - 4 movimentos
   - Estatísticas
 - Adicionar e remover o pokemon da pokedex
+- Paginação
+- Responsividade
+
+## Tecnologias Utilizadas:
+-ReactJS: biblioteca JavaScript.
+-Styled-Components: componentes do ReactJS que permitem a estilização do CSS do código.
+-ReactRouter: componentes para navegação do React.
+-Axios: um cliente para fazer requisições.
+-Material-ui: biblioteca React.
 
 ## Imagens
 ![home](https://user-images.githubusercontent.com/69688122/148769571-708b8415-aba0-4a28-96c2-7997344c83b6.png)
