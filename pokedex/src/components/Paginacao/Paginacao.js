@@ -56,13 +56,75 @@ export default function PaginationOutlined() {
             case 10:
                 setPaginaPoke(270)
                 break;
+
+            case 11:
+                setPaginaPoke(300)
+                break;
+            case 12:
+                setPaginaPoke(330)
+                break;
+            case 13:
+                setPaginaPoke(360)
+                break;
+            case 14:
+                setPaginaPoke(390)
+                break;
+            case 15:
+                setPaginaPoke(420)
+                break;
+            case 16:
+                setPaginaPoke(450)
+                break;
+            case 17:
+                setPaginaPoke(480)
+                break;
+            case 18:
+                setPaginaPoke(510)
+                break;
+            case 19:
+                setPaginaPoke(540)
+                break;
+            case 20:
+                setPaginaPoke(570)
+                break;
+            case 21:
+                setPaginaPoke(600)
+                break;
+
+            case 22:
+                setPaginaPoke(630)
+                break;
+            case 23:
+                setPaginaPoke(660)
+                break;
+            case 24:
+                setPaginaPoke(690)
+                break;
+            case 25:
+                setPaginaPoke(720)
+                break;
+            case 26:
+                setPaginaPoke(750)
+                break;
+            case 27:
+                setPaginaPoke(780)
+                break;
+            case 28:
+                setPaginaPoke(810)
+                break;
+            case 29:
+                setPaginaPoke(840)
+                break;
+            case 30:
+                setPaginaPoke(870)
+                break;
         }
     };
 
   return (
     <ThemeProvider theme={theme}>
     <Stack spacing={2}>
-      <Pagination count={10} page={pagina} onChange={handleChange} variant="outlined" color="primary" />
+      <Pagination count={30} page={pagina} onChange={handleChange} variant="outlined" color="primary" />
     </Stack>
     </ThemeProvider>
   );
