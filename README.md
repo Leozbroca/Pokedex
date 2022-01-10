@@ -6,7 +6,7 @@
 
 
 ## Link do Surge: 
-historical-boundary.surge.sh
+https://historical-boundary.surge.sh/
 
 ## O que funciona:
 - Visualizar todos pokemons disponibilizados na API 
