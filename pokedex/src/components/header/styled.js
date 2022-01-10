@@ -6,7 +6,6 @@ export const CustomHeader = styled.div`
   background-color: #fbab47;
   text-align: center;
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   box-shadow: 0px 0px 10px gray;
@@ -21,6 +20,7 @@ export const CustomHeader = styled.div`
     height: 2rem;
   }
 }
+
 `;
 
 
@@ -34,17 +34,19 @@ export const LogoBackground = styled.img`
   width: 10rem;
   height: 5.2rem;
   padding-left:1.5rem;
-  
-  
+  }
 `;
 
 export const Menu = styled.div`
   display: flex;
-  flex-direction: row;
   margin-right: 6.6rem;
   p {
     padding: 50px;
     font-size: 25px;
+  }
+
+  @media (max-width: 800px) {
+    margin: 1rem 0 2rem;
   }
 `;
 

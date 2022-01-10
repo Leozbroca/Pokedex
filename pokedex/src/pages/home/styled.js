@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 export const ListaPoke = styled.div`
 display:flex;
@@ -8,12 +8,14 @@ justify-content: center;
 `
 
 export const DivPaginacao = styled.div`
-display:flex;
-align-items: center;
-justify-content: center;
-margin-top: 50px;
-`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
 
-export const MainDiv = styled.div`
+  @media (max-width: 800px) {
+    margin-top: 4rem;
+  }
+`;
 
-`
+export const MainDiv = styled.div``;

@@ -7,7 +7,6 @@ import { useNavigate } from "react-router-dom";
 const Header = () => {
   let navigate = useNavigate();
   return (
-
         <CustomHeader>
           <LogoBackground onClick={() => goToHome(navigate)} src={logo} />
           <Menu>

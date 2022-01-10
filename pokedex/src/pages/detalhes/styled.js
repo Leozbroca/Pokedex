@@ -10,6 +10,11 @@ export const CardPokemon = styled.div`
   img {
     align-self: center;
     width: 24%;
+
+    @media (max-width: 800px) {
+      width: 60%;
+      padding-top: 1rem;
+    }
   }
 
   h1 {
@@ -23,6 +28,10 @@ export const CardPokemon = styled.div`
     margin-right: 4rem;
     cursor: pointer;
     color: #ffffff;
+
+    @media (max-width: 800px) {
+      margin-right: 2rem;
+    }
   }
 
   @media screen and (min-device-width : 320px) and (max-device-width : 600px)  {
@@ -51,9 +60,13 @@ export const TypeButton = styled.div`
   text-transform: uppercase;
   display: flex;
   align-items: center;
-  
+
   p {
     color: #ffffff;
+  }
+
+  @media (max-width: 800px) {
+    padding: 0 1rem;
   }
 `;
 
@@ -115,12 +128,18 @@ export const DescriptionContainer = styled.div`
     width:100vw;
 
   }  
+
 `;
 
 export const TypesContainer = styled.div`
   margin-right: 50rem;
   div {
     display: flex;
+    justify-content: center;
+  }
+
+  @media (max-width: 800px) {
+    margin: 1rem 0 2rem 1rem;
   }
 
   @media screen and (min-device-width : 320px) and (max-device-width : 600px)  {
@@ -135,6 +154,7 @@ export const TypesContainer = styled.div`
 export const MovesContainer = styled.div`
   margin-right: 50rem;
 
+
   @media screen and (min-device-width : 320px) and (max-device-width : 600px)  {
     display:flex;
     flex-direction:column;
@@ -143,6 +163,7 @@ export const MovesContainer = styled.div`
     width:100vw;
     padding-top:10px;
   }  
+
 `;
 
 export const StatsContainer = styled.div`
@@ -159,6 +180,7 @@ export const StatsContainer = styled.div`
     width:100vw;
     font-size:15px;
     padding:0px;
+
   }
 `;
 

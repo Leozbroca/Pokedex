@@ -27,7 +27,7 @@ const DetalhesPage = () => {
     pokemon.types.map((pokemon) => {
       return (
         <TypeButton key={pokemon.id} type={pokemon.type.name}>
-          <img src={`/icons/${pokemon.type.name}.svg`} alt="imagem"/>
+          <img src={`/icons/${pokemon.type.name}.svg`} alt="imagem" />
           <p>{pokemon.type.name}</p>
         </TypeButton>
       );

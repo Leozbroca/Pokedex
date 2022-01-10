@@ -1,19 +1,19 @@
-import * as React from 'react';
-import { useContext} from 'react';
-import Pagination from '@mui/material/Pagination';
-import Stack from '@mui/material/Stack';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
-import GlobalStateContext from '../../contexts/GlobalContextState';
+import * as React from "react";
+import { useContext } from "react";
+import Pagination from "@mui/material/Pagination";
+import Stack from "@mui/material/Stack";
+import { createTheme, ThemeProvider } from "@mui/material/styles";
+import GlobalStateContext from "../../contexts/GlobalContextState";
 
 const theme = createTheme({
   palette: {
     primary: {
-      main: '#fbab47',
+      main: "#fbab47",
     },
     secondary: {
-      light: '#0066ff',
-      main: '#0044ff',
-      contrastText: '#ffcc00',
+      light: "#0066ff",
+      main: "#0044ff",
+      contrastText: "#ffcc00",
     },
     contrastThreshold: 3,
     tonalOffset: 0.2,
@@ -21,7 +21,7 @@ const theme = createTheme({
 });
 
 export default function PaginationOutlined() {
-    const {setPaginaPoke, pagina, setPagina} = useContext(GlobalStateContext);
+  const { setPaginaPoke, pagina, setPagina } = useContext(GlobalStateContext);
 
     const handleChange = (event, value) => {
         setPagina(value)
