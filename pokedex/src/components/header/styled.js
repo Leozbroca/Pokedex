@@ -48,18 +48,47 @@ export const Menu = styled.div`
   @media (max-width: 800px) {
     margin: 1rem 0 2rem;
   }
+  .right{
+  margin-left:20px;
+}
 `;
 
 export const ButtonHeader = styled.button`
-  width: 7rem;
-  height: 2rem;
-  font-size: 1rem;
-  margin-left: 20px;
-  border: none;
-  border-radius: 8px;
-  background: #f2f2f2;
 
-  :hover {
-    opacity: 0.6;
-  }
+  background: transparent;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(5px);
+  transition: background-color 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
+
+
+:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%);
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
+  pointer-events: none;
+}
+
+:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+:hover:before {
+  transform: translateX(0);
+}
+
+
+
 `;

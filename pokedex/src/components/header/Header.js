@@ -11,7 +11,7 @@ const Header = () => {
           <LogoBackground onClick={() => goToHome(navigate)} src={logo} />
           <Menu>
             <ButtonHeader onClick={() => goToHome(navigate)}>Home</ButtonHeader>
-            <ButtonHeader onClick={() => goToPokedex(navigate)}>
+            <ButtonHeader className="right" onClick={() => goToPokedex(navigate)}>
               Pokedex
             </ButtonHeader>
           </Menu>

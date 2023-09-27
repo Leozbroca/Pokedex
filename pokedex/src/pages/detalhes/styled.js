@@ -20,7 +20,7 @@ export const CardPokemon = styled.div`
   h1 {
     align-self: center;
     font-style: italic;
-    font-size:3rem;
+    font-size: 3rem;
   }
 
   h4 {
@@ -34,21 +34,59 @@ export const CardPokemon = styled.div`
     }
   }
 
-  @media screen and (min-device-width : 320px) and (max-device-width : 600px)  {
+  @media screen and (min-device-width: 320px) and (max-device-width: 600px) {
+    width: 100vw;
 
-    width:100vw;
-
-    img{
-    width: 18rem;
-    height: 18rem;
+    img {
+      width: 18rem;
+      height: 18rem;
     }
 
-    h1{
+    h1 {
       font-size: 3rem;
     }
+  }
 
-} 
+  .button {
+      background: transparent;
+      color: #fff;
+      padding: 10px 20px;
+      font-size: 18px;
+      border-radius: 5px;
+      cursor: pointer;
+      border: 2px solid rgba(255, 255, 255, 0.5);
+      backdrop-filter: blur(5px);
+      transition: background-color 0.3s ease-in-out;
+      position: absolute;
+      overflow: hidden;
+      top:4%;
+      right:4%;
+    }
 
+    .button:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        45deg,
+        rgba(255, 255, 255, 0.2) 0%,
+        rgba(255, 255, 255, 0) 100%
+      );
+      transform: translateX(-100%);
+      transition: transform 0.3s ease-in-out;
+      pointer-events: none;
+    }
+
+    .button:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    .button:hover:before {
+      transform: translateX(0);
+    }
 `;
 
 export const TypeButton = styled.div`
@@ -80,10 +118,9 @@ export const StatsArea = styled.div`
     margin: 0.6rem 0.5rem;
   }
 
-  @media screen and (min-device-width : 320px) and (max-device-width : 600px)  {
-    width:100vw;
-
-  }  
+  @media screen and (min-device-width: 320px) and (max-device-width: 600px) {
+    width: 100vw;
+  }
 `;
 
 export const StatsItem = styled.div`
@@ -103,13 +140,12 @@ export const StatsItem = styled.div`
     border-radius: 0.5rem;
   }
 
-  @media screen and (min-device-width : 320px) and (max-device-width : 600px)  {
-    display:flex;
+  @media screen and (min-device-width: 320px) and (max-device-width: 600px) {
+    display: flex;
     justify-content: flex-start;
     align-items: center;
-    width:90%;
-
-  }  
+    width: 90%;
+  }
 `;
 
 export const DescriptionContainer = styled.div`
@@ -123,12 +159,10 @@ export const DescriptionContainer = styled.div`
     }
   }
 
-  @media screen and (min-device-width : 320px) and (max-device-width : 600px)  {
-    flex-direction:column;
-    width:100vw;
-
-  }  
-
+  @media screen and (min-device-width: 320px) and (max-device-width: 600px) {
+    flex-direction: column;
+    width: 100vw;
+  }
 `;
 
 export const TypesContainer = styled.div`
@@ -142,64 +176,62 @@ export const TypesContainer = styled.div`
     margin: 1rem 0 2rem 1rem;
   }
 
-  @media screen and (min-device-width : 320px) and (max-device-width : 600px)  {
-    display:flex;
-    flex-direction:column;
+  @media screen and (min-device-width: 320px) and (max-device-width: 600px) {
+    display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items:center;
-    width:100vw;
-  }  
+    align-items: center;
+    width: 100vw;
+  }
 `;
 
 export const MovesContainer = styled.div`
   margin-right: 50rem;
 
-
-  @media screen and (min-device-width : 320px) and (max-device-width : 600px)  {
-    display:flex;
-    flex-direction:column;
+  @media screen and (min-device-width: 320px) and (max-device-width: 600px) {
+    display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items:center;
-    width:100vw;
-    padding-top:10px;
-  }  
-
+    align-items: center;
+    width: 100vw;
+    padding-top: 10px;
+  }
 `;
 
 export const StatsContainer = styled.div`
   position: absolute;
   left: 62vw;
 
-  @media screen and (min-device-width : 320px) and (max-device-width : 600px)  {
+  @media screen and (min-device-width: 320px) and (max-device-width: 600px) {
     position: relative;
-    display:flex;
+    display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-content:center;
-    left:0px;
-    width:100vw;
-    font-size:15px;
-    padding:0px;
-
+    align-content: center;
+    left: 0px;
+    width: 100vw;
+    font-size: 15px;
+    padding: 0px;
   }
 `;
 
 export const DivMaior = styled.div`
-@media screen and (min-device-width : 320px) and (max-device-width : 600px)  {
-    display:flex;
+  @media screen and (min-device-width: 320px) and (max-device-width: 600px) {
+    display: flex;
     flex-wrap: wrap;
-    flex-direction:column;
-    width:100vw;
-} 
-`
+    flex-direction: column;
+    width: 100vw;
+
+    
+  }
+`;
 
 export const DivMoves = styled.div`
-@media screen and (min-device-width : 320px) and (max-device-width : 600px)  {
-    padding-top:180px;
-    display:flex;
-    flex-direction:column;
+  @media screen and (min-device-width: 320px) and (max-device-width: 600px) {
+    padding-top: 180px;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
-    width:100vw;
-
-} 
-`
+    width: 100vw;
+  }
+`;

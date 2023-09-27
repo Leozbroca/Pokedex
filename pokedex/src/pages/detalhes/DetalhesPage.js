@@ -13,7 +13,7 @@ import {
   StatsContainer,
   DescriptionContainer,
   DivMaior,
-  DivMoves
+  DivMoves,
 } from "./styled";
 
 const DetalhesPage = () => {
@@ -59,7 +59,9 @@ const DetalhesPage = () => {
       {pokemon && (
         <DivMaior>
           <CardPokemon type={pokeType}>
-            <h4 onClick={() => goToHome(navigate)}>Voltar</h4>
+            <button className="button" onClick={() => goToHome(navigate)}>
+              Voltar
+            </button>
             <img
               src={pokemon.sprites.other["official-artwork"].front_default}
               alt={pokemon.name}
