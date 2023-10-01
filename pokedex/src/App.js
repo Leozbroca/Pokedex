@@ -11,7 +11,7 @@ function App() {
       <GlobalStyle />
       <GlobalState>
         <BrowserRouter>
-          <Router />
+          <Router />   
         </BrowserRouter>
       </GlobalState>
     </div>

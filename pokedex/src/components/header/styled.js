@@ -9,17 +9,15 @@ export const CustomHeader = styled.div`
   justify-content: space-between;
   align-items: center;
   box-shadow: 0px 0px 10px gray;
+  -moz-user-select: -moz-none;
+   -khtml-user-select: none;
+   -webkit-user-select: none;
+   -ms-user-select: none;
+   user-select: none;
 
   h1 {
     padding-right: 50px;
   }
-
-  @media screen and (min-device-width : 320px) and (max-device-width : 480px)  {
-  button{
-    width: 4.8rem;
-    height: 2rem;
-  }
-}
 
 `;
 
@@ -29,7 +27,7 @@ export const LogoBackground = styled.img`
   height: 6.4rem;
   padding-left: 6.6rem;
 
-  @media screen and (min-device-width : 320px) and (max-device-width : 480px)  {
+  @media screen and (min-device-width : 210px) and (max-device-width : 480px)  {
   
   width: 10rem;
   height: 5.2rem;
@@ -50,7 +48,21 @@ export const Menu = styled.div`
   }
   .right{
   margin-left:20px;
+  @media (max-width: 800px) {
+    margin-right:10px;
+  }
+  @media (max-width: 350px) {
+    width:80px;
+    font-size:10px;
+  }
 }
+.left{
+  @media (max-width: 550px) {
+    display:none;
+  }
+}
+
+
 `;
 
 export const ButtonHeader = styled.button`

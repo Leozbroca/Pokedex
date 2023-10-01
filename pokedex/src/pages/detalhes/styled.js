@@ -159,6 +159,11 @@ export const DescriptionContainer = styled.div`
     }
   }
 
+  @media (max-width: 500px) {
+    display:flex;
+    flex-direction:column;
+  }
+
   @media screen and (min-device-width: 320px) and (max-device-width: 600px) {
     flex-direction: column;
     width: 100vw;
@@ -216,11 +221,17 @@ export const StatsContainer = styled.div`
 `;
 
 export const DivMaior = styled.div`
-  @media screen and (min-device-width: 320px) and (max-device-width: 600px) {
+
+@media (max-width: 500px) {
+    display:flex;
+    flex-direction:column;
+  }
+  /* @media screen and (min-device-width: 320px) and (max-device-width: 600px) {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     width: 100vw;
+  } */
 
     
   }

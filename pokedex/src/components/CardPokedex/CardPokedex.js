@@ -30,7 +30,7 @@ export default function CardPokemon({ name, pokemon, removerPokedex }) {
       setId(res.data.id);
       setTypes(res.data.types);
     } catch (err) {
-      console.log(err);
+      alert(err);
     }
   };
 

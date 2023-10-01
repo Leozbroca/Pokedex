@@ -14,7 +14,6 @@ export const Card = styled.div`
   box-shadow: 0px 0px 8px 8px #f2f2f2;
 
   div {
-    cursor: pointer;
 
     p {
       text-align: center;
@@ -28,6 +27,10 @@ export const Card = styled.div`
     width: 150px;
     text-align: center;
     margin-top: 20px;
+
+    :hover{
+      cursor:pointer;
+    }
   }
 `;
 

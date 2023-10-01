@@ -11,6 +11,7 @@ import PaginationOutlined from "../../components/Paginacao/Paginacao";
 import CustomizedSnackbars from "../../constants/Alerts";
 import CustomizedSnackbars2 from "../../constants/Alerts2";
 import Header from "../../components/header/Header";
+import Footer from "../../components/Footer/footer";
 
 const HomePage = () => {
   const { pokedex, paginaPoke, setOpenRelease, openRelease, open } =
@@ -52,6 +53,7 @@ const HomePage = () => {
       <ListaPoke>{pokemonsList}</ListaPoke>
       {CustomizedSnackbars()}
       {CustomizedSnackbars2()}
+      <Footer/>
     </MainDiv>
   );
 };

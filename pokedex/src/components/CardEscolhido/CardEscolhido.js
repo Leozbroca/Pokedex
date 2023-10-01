@@ -40,7 +40,7 @@ export default function CardPokemon({ name, pokemon, removerPokedexfromHome }) {
       setId(res.data.id);
       setTypes(res.data.types);
     } catch (err) {
-      console.log(err);
+      alert(err);
     }
   };
 
@@ -50,7 +50,6 @@ export default function CardPokemon({ name, pokemon, removerPokedexfromHome }) {
       return (
         <TypesRow key={types.type.name} type={types.type.name}>
           <TypeImg src={`/icons/${types.type.name}.svg`} alt="imagem" />
-          {console.log(types.type.name)}
         </TypesRow>
       );
     });

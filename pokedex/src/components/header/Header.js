@@ -10,7 +10,7 @@ const Header = () => {
         <CustomHeader>
           <LogoBackground onClick={() => goToHome(navigate)} src={logo} />
           <Menu>
-            <ButtonHeader onClick={() => goToHome(navigate)}>Home</ButtonHeader>
+            <ButtonHeader className="left" onClick={() => goToHome(navigate)}>Home</ButtonHeader>
             <ButtonHeader className="right" onClick={() => goToPokedex(navigate)}>
               Pokedex
             </ButtonHeader>

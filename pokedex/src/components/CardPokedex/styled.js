@@ -13,7 +13,6 @@ export const Card = styled.div`
   font-family: "Zen Dots", cursive;
 
   div {
-    cursor: pointer;
 
     p {
       text-align: center;
@@ -28,6 +27,10 @@ export const Card = styled.div`
     width: 150px;
     text-align: center;
     margin-top: 20px;
+
+    :hover{
+      cursor:pointer;
+    }
   }
 `;
 
